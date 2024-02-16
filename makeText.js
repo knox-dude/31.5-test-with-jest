@@ -1,7 +1,7 @@
 /** Command-line tool to generate Markov text. */
-import fs from 'fs';
-import axios from 'axios';
-import { MarkovMachine } from "./markov.js"
+const fs = require('fs');
+const axios = require('axios');
+const { MarkovMachine } = require("./markov");
 
 function cat(path, callback) {
     fs.readFile(path, 'utf8', (err, data) => {

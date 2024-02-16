@@ -1,5 +1,5 @@
 /** Textual markov chain generator */
-export class MarkovMachine {
+class MarkovMachine {
   /** build markov machine; read in text.*/
 
   constructor(text) {
@@ -58,6 +58,9 @@ export class MarkovMachine {
       prev=curr;
 
       if (!curr) {
+        if (curr_num == 0) { //make sure some output occurs before exiting
+          continue
+        }
         break;
       }
 
@@ -70,3 +73,5 @@ export class MarkovMachine {
 
   }
 }
+
+module.exports = {MarkovMachine}
