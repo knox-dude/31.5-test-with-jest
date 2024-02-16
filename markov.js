@@ -1,6 +1,5 @@
 /** Textual markov chain generator */
-
-class MarkovMachine {
+export class MarkovMachine {
   /** build markov machine; read in text.*/
 
   constructor(text) {
@@ -63,6 +62,7 @@ class MarkovMachine {
       }
 
       generated_text += curr + " ";
+      curr_num++;
 
     }
 
